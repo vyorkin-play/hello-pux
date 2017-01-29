@@ -11,7 +11,9 @@
     "purescript-console": "^2.0.0",
     "purescript-pux": "^7.0.0",
     "purescript-pux-devtool": "^4.1.0",
-    "purescript-eff": "^2.0.0"
+    "purescript-eff": "^2.0.0",
+    "purescript-argonaut": "^2.0.0",
+    "purescript-affjax": "^3.0.2"
   },
   "devDependencies": {
     "purescript-psci-support": "^2.0.0"

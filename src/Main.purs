@@ -1,17 +1,16 @@
 module Play.Main where
 
-import Play.App (init, view, update)
-
-import Prelude (Unit, bind)
 import Control.Monad.Eff (Eff)
+import Network.HTTP.Affjax (AJAX)
+import Play.Todos (init, view, update)
+import Prelude (Unit, bind)
+import Pux (CoreEffects, renderToDOM, start)
 
-import Pux (CoreEffects, fromSimple, renderToDOM, start)
-
-main :: forall e. Eff (CoreEffects e) Unit
+main :: Eff (CoreEffects (ajax :: AJAX)) Unit
 main = do
   app <- start
-    { initialState: init 0
-    , update: fromSimple update
+    { initialState: init
+    , update: update
     , view: view
     , inputs: []
     }
