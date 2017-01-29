@@ -1,4 +1,7 @@
-build:
-	pulp build --main Play --to output/bundle.js
+serve:
+	pulp server --main Play.Main
 
-.PHONY: build
+build:
+	pulp build --main Play.Main --to output/bundle.js
+
+.PHONY: build serve
