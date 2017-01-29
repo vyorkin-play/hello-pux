@@ -1,6 +1,6 @@
 module Play.Counter where
 
-import Prelude (bind, const, show, (+), (-))
+import Prelude (id, const, show, (+), (-))
 
 import Pux.Html (Html, button, div, span, (!), (#>), (##))
 import Pux.Html.Events (onClick)
@@ -9,7 +9,7 @@ data Action = Inc | Dec
 type State = Int
 
 init :: Int -> State
-init count = count
+init = id
 
 update :: Action -> State -> State
 update Inc count = count + 1

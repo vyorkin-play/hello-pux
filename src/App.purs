@@ -22,9 +22,12 @@ init count =
   }
 
 update :: Action -> State -> State
-update (Top action) state = state { top = Counter.update action state.top }
-update (Bottom action) state = state { bottom = Counter.update action state.bottom }
-update Reset state = state { top = 0, bottom = 0 }
+update (Top action) state =
+  state { top = Counter.update action state.top }
+update (Bottom action) state =
+  state { bottom = Counter.update action state.bottom }
+update Reset state =
+  state { top = 0, bottom = 0 }
 
 view :: State -> Html Action
 view state = div ##
