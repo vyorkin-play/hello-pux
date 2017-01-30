@@ -1,0 +1,28 @@
+{
+  "name": "hello-pux",
+  "version": "0.1.0",
+  "description": "Playground",
+  "main": "output/app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vyorkin-play/hello-pux.git"
+  },
+  "author": "Vasiliy Yorkin <vasiliy.yorkin@gmail.com> (https://github.com/vyorkin)",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/vyorkin-play/hello-pux/issues"
+  },
+  "homepage": "https://github.com/vyorkin-play/hello-pux#readme",
+  "devDependencies": {
+    "rollup": "^0.41.4",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "rollup-plugin-purs": "^1.0.13"
+  }
+}
